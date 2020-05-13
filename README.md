@@ -1,4 +1,4 @@
-#A simple test for new interns.
+# A simple test for new interns.
 
 The goal of this test is that we can check if you have a basic understanding of coding.
 
