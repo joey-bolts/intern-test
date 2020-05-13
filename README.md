@@ -96,7 +96,7 @@ If you can't get this to work, try to get a .csv file from animals.xlsx and impo
 * You can call this assignment complete when all imports work when calling `php commands.php`
 
 ### Deliverables
-* Compile this project as a zip and send it to the correct email it. 
+* Compile this project as a zip and mail it to your contactperson.
 
 ### Bonus points
-Make a pull request with your solution on this gitlab repository.
+Make a pull request with your solution on this github repository.
