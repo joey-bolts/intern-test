@@ -1,0 +1,16 @@
+{
+  "name": "beech/intern-test",
+  "license": "",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Joey Bouten",
+      "email": "joey@beech.it"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    }
+  }
+}
