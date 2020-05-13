@@ -58,7 +58,7 @@ ______________________________________________________
 Tthis contains the example database
 ```
 
-Setup the enviroment.
+##### Setup the enviroment.
 
 * Install composer.
 
@@ -74,26 +74,26 @@ Setup the enviroment.
 
 * run `php commands.php` in the root of your project. If everything is done correctly you should have 1000 cars in your database.
 
-#####Notes
+##### Notes
 * Your allowed to create as many files as you want.
 * Make sure you don't put any private info in.
 
-###Assignment 1
+### Assignment 1
 With all the example code you should be able to make a new table in the database called users. These users all have to be imported in the database. This also has to be done by calling `php command.php`
 
 Use the example code and make sure not the break the other import.
 
-###Assignment 2
+### Assignment 2
 Import `animals.xlsx` using `https://github.com/shuchkin/simplexlsx` this is a composer package.
 
 Install it using the following command. `composer require shuchkin/simplexlsx`
 If you can't get this to work, try to get a .csv file from animals.xlsx and import it the same way as you did at **Assignment 1**
 
-####Complete
+#### Complete
 * You can call this assignment complete when all imports work when calling `php commands.php`
 
-###Deliverables
+### Deliverables
 * Compile this project as a zip and send it to the correct email it. 
 
-###Bonus points
+### Bonus points
 Make a pull request with your solution on this gitlab repository.
