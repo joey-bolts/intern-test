@@ -60,6 +60,9 @@ Tthis contains the example database
 
 ##### Setup the enviroment.
 
+* Install php if not yet done so
+`https://www.sitepoint.com/how-to-install-php-on-windows/`
+
 * Install composer.
 
 `https://getcomposer.org/doc/00-intro.md`
