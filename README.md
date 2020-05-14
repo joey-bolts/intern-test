@@ -21,7 +21,9 @@ This class serves as an example class which imports all the car data from exampl
 ```
 App/Connector/Connection.php
 ______________________________________________________
-This class is able to return a connection to your database, make the following variables are set correct for a connection to your database.
+This class is able to return a connection to your database.
+Make the following variables are set correct for a connection to your database.
+
 $serverName
 $databaseName
 $userName
@@ -55,7 +57,7 @@ This avoids commiting unneeded files
 ```
 .intern_test.sql
 ______________________________________________________
-Tthis contains the example database
+This contains the example database
 ```
 
 ##### Setup the enviroment.
