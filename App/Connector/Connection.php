@@ -21,8 +21,8 @@ class Connection
         try {
             $serverName = 'localhost';
             $databaseName = 'intern_test';
-            $userName = 'intern_test';
-            $password = 'intern_test';
+            $userName = 'root';
+            $password = '2018beech';
 
             // Below is a localhost connection
             self::$connection = new PDO("mysql:host=$serverName;dbname=$databaseName", $userName, $password);
