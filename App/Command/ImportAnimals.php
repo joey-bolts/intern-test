@@ -4,6 +4,7 @@ namespace App\Command;
 
 
 use App\Connector\Connection;
+use SimpleXLSX;
 
 class importAnimals
 {
@@ -30,24 +31,31 @@ class importAnimals
      */
     public function execute(): void
     {
-        $csv = file_get_contents(__DIR__ . '/../Files/' . $this->fileName);
-        $this->insertAnimalsIntoDatabase($csv);
+        if ( $xlsx = SimpleXLSX::parse((__DIR__ . '/../Files/' . $this->fileName)) ) {
+            $data = $xlsx->rows();
+            $this->insertAnimalsIntoDatabase($data);
+        } else {
+            echo SimpleXLSX::parseError();
+        }
     }
 
     /**
-     * @param $csv
-     * Parse animals from .csv and insert into database.
+     * @param $data
+     * Parse cars from .xlsx and insert into database.
      */
-    private function insertAnimalsIntoDatabase($csv)
+    private function insertAnimalsIntoDatabase($data)
     {
+//        foreach($data as $dataRow)
+//        {
+//            var_dump($dataRow[0]);
+//        }
+
         $connection = Connection::getConnection();
 
-        $data = str_getcsv($csv, "\n");
 
         foreach ($data as $index => $dataRow) {
             //skip first row
             if ($index > 0) {
-                $dataRow = explode(",", $dataRow);
                 $dataArray = [
                     'animal_common_name' => $dataRow[0],
                     'animal_scientific_name' => $dataRow[1],
