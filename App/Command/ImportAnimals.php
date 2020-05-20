@@ -24,26 +24,24 @@ class importAnimals
      */
     public function execute(): void
     {
-        $csv = file_get_contents(__DIR__ . '/../Files/' . $this->fileName);
-        $this->insertAnimalsIntoDatabase($csv);
-    }
-    /**
-     * @param $csv
-     * Parse cars from .csv and insert into database.
-     */
-    private function insertAnimalsIntoDatabase($csv)
-    {
         if ( $xlsx = SimpleXLSX::parse((__DIR__ . '/../Files/' . $this->fileName)) ) {
-            print_r( $xlsx->rows() );
+            $data = $xlsx->rows();
+            $this->insertAnimalsIntoDatabase($data);
         } else {
             echo SimpleXLSX::parseError();
         }
+    }
+    /**
+     * @param $data
+     * Parse cars from .xlsx and insert into database.
+     */
+    private function insertAnimalsIntoDatabase($data)
+    {
+
         $connection = Connection::getConnection();
-        $data = str_getcsv($csv, "\n");
         foreach ($data as $index => $dataRow) {
             //skip first row
             if ($index > 0) {
-                $dataRow = explode(",", $dataRow);
                 $dataArray = [
                     'animal_common_name' => $dataRow[0],
                     'animal_scientific_name' => $dataRow[1],
@@ -64,3 +62,4 @@ class importAnimals
         }
     }
 }
+

@@ -3,7 +3,7 @@ namespace App;
 
 use App\Command\ImportCars;
 use App\Command\ImportUsers;
-use App\Command\Importanimals;
+use App\Command\ImportAnimals;
 
 
 
@@ -21,8 +21,8 @@ echo 'Executing Import Users'.PHP_EOL;
 $importUsersClass->execute();
 echo 'Executing Import Users finished'.PHP_EOL;
 
-$importAnimalsClass = new Importanimals;
+$importAnimalsClass = new ImportAnimals;
 
 echo 'Executing Import animals'.PHP_EOL;
-$importCarsClass->execute();
+$importAnimalsClass->execute();
 echo 'Executing Import animals finished'.PHP_EOL;
