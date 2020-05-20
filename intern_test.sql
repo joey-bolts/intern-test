@@ -33,6 +33,20 @@ CREATE TABLE `cars` (
   `car_model_year` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `animals` (
+  `id` int(11) NOT NULL,
+  `animal_common_name` varchar(255) NOT NULL,
+  `animal_scientific_name` varchar(255) NOT NULL,
+  `food_name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `file_name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -41,6 +55,12 @@ CREATE TABLE `cars` (
 -- Indexes for table `cars`
 --
 ALTER TABLE `cars`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `animals`
   ADD PRIMARY KEY (`id`);
 
 --
