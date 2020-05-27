@@ -98,6 +98,7 @@ If you can't get this to work, try to get a .csv file from animals.xlsx and impo
 * You can call this assignment complete when all imports work when calling `php commands.php`
 
 ### Deliverables
+* Make sure to include all needed files, don't forget the sql file.
 * Compile this project as a zip and mail it to your contactperson.
 
 ### Bonus points
